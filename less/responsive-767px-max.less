@@ -1,0 +1,333 @@
+//
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+
+
+@media (max-width: 767px) {
+.logo-flat{display:none;}
+
+  // GRID & CONTAINERS
+  // -----------------
+  // Remove width from containers
+  .container {
+    width: auto;
+  }
+  // Fluid rows
+  .row-fluid {
+    width: 100%;
+  }
+  // Undo negative margin on rows and thumbnails
+  .row,
+  .thumbnails {
+    margin-left: 0;
+  }
+  .thumbnails > li {
+    float: none;
+    margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
+  }
+  // Make all grid-sized elements block level again
+  [class*="span"],
+  .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
+  .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    .box-sizing(border-box);
+  }
+  .span12,
+  .row-fluid .span12 {
+    width: 100%;
+    .box-sizing(border-box);
+  }
+  .row-fluid [class*="offset"]:first-child {
+    margin-left: 0;
+  }
+
+  // Modals
+  .modal {
+    position: fixed;
+    top:   20px;
+    left:  20px;
+    right: 20px;
+    width: auto;
+    margin: 0;
+    &.fade  { top: -100px; }
+    &.fade.in { top: 20px; }
+  }
+
+
+.marketing-img{width:100px;height:170px;position:relative;margin-bottom:10px;left:20%;}
+
+ body {
+    margin:0;
+    padding:0;
+    width:100%;
+  }
+.logo-flat{display:none;}
+.navbartop button {font-size:12px;height:26px;}
+.fullimg {z-index:-1;width:100%;min-width:320px;height:auto;
+background:@bleumundo;} 
+
+
+.hero-unit {height:20px;background:@bleumundo;}
+
+ .hero-unit img{display:none;}
+  .social{display:none;}
+
+  // Smooth out the collapsing/expanding nav
+  .nav-collapse {
+    -webkit-transform: translate3d(0, 0, 0); // activate the GPU
+  }
+
+  // Block level the page header small tag for readability
+  .page-header h1 small {
+    display: block;
+    line-height: @baseLineHeight;
+  }
+
+  // Update checkboxes for iOS
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid #ccc;
+  }
+
+  // Remove the horizontal form styles
+  .form-horizontal {
+    .control-label {
+      float: none;
+      width: auto;
+      padding-top: 0;
+      text-align: left;
+    }
+    // Move over all input controls and content
+    .controls {
+      margin-left: 0;
+    }
+    // Move the options list down to align with labels
+    .control-list {
+      padding-top: 0; // has to be padding because margin collaspes
+    }
+    // Move over buttons in .form-actions to align with .controls
+    .form-actions {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  // Medias
+  // Reset float and spacing to stack
+  .media .pull-left,
+  .media .pull-right  {
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  // Remove side margins since we stack instead of indent
+  .media-object {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  // Modals
+  .modal {
+    top:   10px;
+    left:  10px;
+    right: 10px;
+  }
+  .modal-header .close {
+    padding: 10px;
+    margin: -10px;
+  }
+
+  // Carousel
+  .carousel-caption {
+    position: static;
+  }
+
+.origin-scroll {display:none;}
+
+.marketing-img{width:370px;height:170px;position:relative;margin-bottom:10px;margin-left:-40px;}
+
+// Buttons index tabs
+// --------------------------------------------------
+.origin-tabs {
+
+}
+
+.origin-tabs ul{
+list-style: none;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+right:0;
+left:0;
+bottom:0;
+height:50px;
+
+}
+.origin-tabs li {
+width:42%;
+margin-right:2%;
+vertical-align: middle;
+display: inline-block;
+margin-left:3%;
+cursor:pointer;
+margin-top:0;
+background:@grayLighter;
+height:60px;
+}
+
+.origin-tabs li:last-child{
+margin-left:0px;}
+
+.origin-tabs li a {
+width:100%;
+min-height:85px;
+font-size:18px;
+line-height:22px;
+font-family: 'Open Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
+font-weight:300;
+color:@gray;
+vertical-align: middle;
+display: inline-block;
+left:0;
+right:0;
+padding-top:5px;
+cursor:pointer;
+text-align:center;
+position:relative;
+
+   }
+.origin-tabs li a:hover {
+font-size:18px;
+color:#2A2A2A;
+text-decoration:underline;
+
+}
+
+.origin-tabs li.active {
+width:42%;
+background:@white;
+position:relative;
+border-top:solid 1px @grayLighter;
+border-left:solid 1px @grayLighter;
+border-right:solid 1px @grayLighter;
+   }
+
+
+.origin-tabs li.active:before, .origin-tabs li.active:after {
+height:1px;
+margin-top:109px;
+content: "";
+position: absolute;
+background: @grayLighter;  /* Match the background */
+top: 0;
+bottom: 0;
+width: 999px;   /* some huge width */
+} 
+.origin-tabs li.active:before {
+   right:100%; 
+}
+.origin-tabs li.active:after {
+   left:100%;
+}
+
+.origin-tabs li.active a{
+color:@gray;
+font-weight:400;
+}
+.origin-tabs img.logo-left-scroll{
+display:none;
+}
+.origin-tabs a.register-btn 
+{display:none;
+}
+.origin-tabs .incent, .incent-right {
+display:none;
+}
+
+.tab_content {
+  overflow: auto; // prevent content from running below tabs
+  overflow-x:hidden;
+  width:100%;
+}
+
+
+// Illustr Home
+.container-home-small{position:relative;max-width:51.875em;margin-top:3.125em;margin-right:auto;margin-left:auto;left:0;
+        right:0;
+}
+.container-home-small h2 {font-size:28px;}
+.lead {font-size:18px;}
+.span8 {width:100%; float:both;}
+
+
+.search-unit {
+width:100%;
+height:auto;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: @baseLineHeight * 1.5;
+  position: relative;
+  background-color:@gray;
+
+  .align{
+  position:relative;
+width:300px;
+height:200px;
+margin:0 auto 0 auto;
+display:block;
+}
+
+form{border:none;}
+input{width:290px;height:45px;font-size:20px;line-height:22px;border:none;position:relative;margin-top:10px;margin-bottom:10px;left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+        outline:none;
+        float:left;
+        display:block;
+
+}
+input:focus{outline:none;}
+.btnsearch{height:53px;margin-top:10px;margin-left:0;width:300px;font-size:16px;position:relative;
+        margin-left:auto;
+        margin-right:auto;display:block;
+float:left;}
+
+select {
+width:300px;
+padding-top:10px;padding-bottom:10px;
+border:none;height:53px!important;
+font-size:16px;
+
+          -webkit-appearance: none;
+           background: white url(../img/arrow-select.svg) no-repeat bottom right; 
+      }
+
+}
+ 
+  p.underline{text-decoration:underline;clear:none;}
+  li {
+    line-height: @baseLineHeight * 1.5; // Reset since we specify in type.less
+  }
+
+  
+.clients {height:20px;width:100%;background:@gray;position:relative;margin-top:10px;margin-bottom:10px;}
+.clients img{position:absolute;width:80%;height:auto;left:0;margin-top:10px;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+}
+.marketing-img{display:none;}
+
+.nl-form{display:none;}
+.btncallto {text-align:center;width:95%;position:relative;line-height:60px;font-size:20px;padding:10px;margin-bottom:10px;display:block;text-align:center;}
+
+}
